@@ -1,8 +1,10 @@
+---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: podinfo
-  namespace: test
+  namespace: default
 spec:
-  interval: 1m
-  url: https://stefanprodan.github.io/podinfo
+  type: oci
+  interval: 5m0s
+  url: oci://ghcr.io/stefanprodan/charts
