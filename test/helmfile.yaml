@@ -1,7 +1,8 @@
-repositories:
-  - name: stable
-    url: https://kubernetes-charts.storage.googleapis.com
-
-  - name: ingress-backend
-    chart: stable/nginx-ingress
-    version: 1.36.0
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: podinfo
+  namespace: default
+spec:
+  interval: 1m
+  url: https://stefanprodan.github.io/podinfo
