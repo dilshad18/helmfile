@@ -1,0 +1,7 @@
+repositories:
+  - name: stable
+    url: https://kubernetes-charts.storage.googleapis.com
+
+  - name: ingress-backend
+    chart: stable/nginx-ingress
+    version: 1.36.0
